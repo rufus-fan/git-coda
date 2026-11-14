@@ -1,15 +1,15 @@
 ---
 name: git-coda
 description: |
-  自动化 Git 工作流一键发布助手，执行完整的「coda」流程：
+  自动化 Git 工作流一键发布助手，执行完整的「ship」流程：
   基于最新 main 切新分支 → commit → 推送 → 创建 PR → squash merge → 回 main。
-  调用 coda 本身就是对完整流程的授权；自动推断分支名、commit message 和 PR 内容，
+  调用 ship 本身就是对完整流程的授权；自动推断分支名、commit message 和 PR 内容，
   并主动解决 Git 冲突、测试、lint、类型检查、构建和 CI 失败，持续修复和重试，
   直到改动成功合并。不要因可自行修复的失败暂停，只在认证、权限、仓库保护等
   无法由当前环境解决的外部阻塞出现时请求用户介入。
 
-  仅在用户明确表达「coda」意图时触发，例如：
-  - 直接说「coda」「/coda」「git coda」
+  仅在用户明确表达「ship」意图时触发，例如：
+  - 直接说「ship」「/ship」「git ship」
   - 明确要求完整走完 git 流程：「帮我走一遍 git 流程」「拉 main、切分支、提 PR、合并」
   - 使用类似「发布这次改动」「把这些改动提成 PR 并合并」的表达
 
@@ -20,9 +20,9 @@ description: |
   - 讨论 git 相关问题或解释 git 概念
 ---
 
-# git-coda — 一键 Git 工作流
+# git-coda — 一键 Ship 工作流
 
-> Coda，乐章的终曲：把整段开发历史收束成一个音符，落回 main。
+> git-coda 是项目名；coda（终曲）是乐章的收束段，把整段开发历史收束成一个音符，落回 main。工作流的动词仍然是 ship。
 
 ## 目标与成功标准
 
@@ -32,7 +32,7 @@ description: |
 当前改动 → 基于最新 main 切新分支 → commit → PR → squash merge → 回 main
 ```
 
-用户调用 `coda` 就表示已经授权执行整条工作流。流程应连续完成，不要为分支名、
+用户调用 `ship` 就表示已经授权执行整条工作流。流程应连续完成，不要为分支名、
 commit message、PR 标题、PR 正文、冲突解决方案、验证修复或是否继续等信息请求确认。
 
 这份授权包括：
@@ -50,7 +50,7 @@ commit message、PR 标题、PR 正文、冲突解决方案、验证修复或是
 
 ## 核心执行原则
 
-- `coda` 的默认结果是“发布成功”，不是“发现问题后把问题交还给用户”。
+- `ship` 的默认结果是“发布成功”，不是“发现问题后把问题交还给用户”。
 - 命令失败后先判断原因并恢复流程；不要机械重复同一个失败命令。
 - 以最新 `origin/main` 的现有线上能力和当前改动的产品目标为共同约束，优先保留两者。
 - 修复根因，不通过跳过测试、删除断言、关闭规则或使用 `--no-verify` 制造假通过。
@@ -264,7 +264,7 @@ gh pr view <pr-number> --json state,mergedAt,mergeCommit,url
 打印最终状态：
 
 ```text
-🎼 Coda 完成！
+🚀 Ship 完成！
   ✓ 分支 <branch-name> 已合并到 main
   ✓ 本地验证和必需 CI 已通过
   ✓ 当前在 main，已同步最新代码（<commit-hash>）

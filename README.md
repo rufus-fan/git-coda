@@ -12,7 +12,7 @@
 working tree → latest main → new branch → commit → local checks → PR → squash merge
 ```
 
-Coda is the closing passage of a piece of music: it gathers everything that came before and resolves it into a final note. Invoking `coda` authorizes the full workflow. It generates the branch name, Conventional Commit, and PR content, resolves conflicts, fixes validation or CI failures, and continues until the PR is merged.
+Coda is the closing passage of a piece of music: it gathers everything that came before and resolves it into a final note — that's the name. The verb you use is still `ship`. Invoking `ship` authorizes the full workflow. It generates the branch name, Conventional Commit, and PR content, resolves conflicts, fixes validation or CI failures, and continues until the PR is merged.
 
 <p align="center">
   <img src="./assets/readme/workflow.svg" width="100%" alt="The seven guarded stages of the git-coda workflow">
@@ -44,19 +44,19 @@ If your client uses another skills directory, clone it there instead. The real e
 Finish your change, leave it uncommitted in the working tree, then ask your agent:
 
 ```text
-coda
+ship
 ```
 
 You can also provide the branch and commit up front:
 
 ```text
-Coda this as feat/add-export with commit "feat(export): add markdown export"
+Ship this as feat/add-export with commit "feat(export): add markdown export"
 ```
 
 `git-coda` shows the resolved plan and then continues immediately:
 
 ```text
-🎼 Ready to coda:
+📦 Ready to ship:
   Branch: feat/add-export
   Commit: feat(export): add markdown export
   Target: main ← feat/add-export (squash merge)
@@ -89,7 +89,7 @@ When no trustworthy validation command exists, the Skill reports that clearly in
 
 ## Safety model
 
-Invoking `coda` authorizes the complete publishing workflow, conflict resolution, and related validation fixes. The Skill preserves current production behavior and the new feature while repairing test, lint, type, build, and CI failures. It never force-pushes, hard-resets, skips checks, or weakens valid tests. It asks for help only when an external blocker such as authentication, permissions, or required human approval cannot be resolved locally.
+Invoking `ship` authorizes the complete publishing workflow, conflict resolution, and related validation fixes. The Skill preserves current production behavior and the new feature while repairing test, lint, type, build, and CI failures. It never force-pushes, hard-resets, skips checks, or weakens valid tests. It asks for help only when an external blocker such as authentication, permissions, or required human approval cannot be resolved locally.
 
 ## Customize
 

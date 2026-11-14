@@ -12,7 +12,7 @@
 工作区改动 → 最新 main → 新分支 → commit → 本地验证 → PR → squash merge
 ```
 
-Coda（终曲）是乐章的收束段：把此前的全部主题收拢，落成最后一个音符。调用 `coda` 就表示授权完整发布流程。它会自动生成分支名、Conventional Commit 和 PR 内容，主动解决冲突并修复验证或 CI 失败，直到 PR 成功合并。
+Coda（终曲）是乐章的收束段：把此前的全部主题收拢，落成最后一个音符——这是项目名的由来。你使用的动词仍然是 `ship`。调用 `ship` 就表示授权完整发布流程。它会自动生成分支名、Conventional Commit 和 PR 内容，主动解决冲突并修复验证或 CI 失败，直到 PR 成功合并。
 
 <p align="center">
   <img src="./assets/readme/workflow.svg" width="100%" alt="git-coda 七个带安全检查的工作阶段">
@@ -44,25 +44,25 @@ git clone https://github.com/rufus-fan/git-coda.git ~/.agents/skills/git-coda
 完成改动并保留在工作区，然后告诉 Agent：
 
 ```text
-coda
+ship
 ```
 
 也可以提前指定分支和 commit：
 
 ```text
-把这次改动 coda 为 feat/add-export，commit 用 "feat(export): add markdown export"
+把这次改动 ship 为 feat/add-export，commit 用 "feat(export): add markdown export"
 ```
 
 `git-coda` 会展示自动确定的方案，然后立即继续：
 
 ```text
-🎼 准备 coda：
+📦 准备 ship：
   分支名：feat/add-export
   Commit：feat(export): add markdown export
   目标：main ← feat/add-export（squash merge）
 ```
 
-不需要确认分支名、commit message、PR 标题或 PR 正文。需要特定名称时，在调用 `coda` 时直接提供即可。
+不需要确认分支名、commit message、PR 标题或 PR 正文。需要特定名称时，在调用 `ship` 时直接提供即可。
 
 ## 工作流程
 
@@ -89,7 +89,7 @@ coda
 
 ## 安全边界
 
-调用 `coda` 本身就是对完整发布流程、冲突解决和相关验证修复的授权。Skill 会保留最新线上能力与当前功能目标，修复测试、lint、类型、构建和 CI 问题。它不会使用 force push、`reset --hard`、跳过检查或弱化有效测试。只有认证、权限、人工审批等外部阻塞才需要用户介入。
+调用 `ship` 本身就是对完整发布流程、冲突解决和相关验证修复的授权。Skill 会保留最新线上能力与当前功能目标，修复测试、lint、类型、构建和 CI 问题。它不会使用 force push、`reset --hard`、跳过检查或弱化有效测试。只有认证、权限、人工审批等外部阻塞才需要用户介入。
 
 ## 自定义
 
