@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">git-coda</title>
+  <desc id="desc">Every change resolves into one final note: stash, sync, branch, commit, verify, pull request, squash merge — the coda sign closes the score.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0E1018"/>
+      <stop offset="1" stop-color="#0A0C12"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="400" rx="28" fill="url(#bg)"/>
+
+  <!-- faint background staff sweeping the whole card -->
+  <g stroke="#171B28" stroke-width="1">
+    <path d="M0 84H1200M0 108H1200M0 132H1200M0 156H1200M0 180H1200"/>
+  </g>
+
+  <g transform="translate(64 50)">
+    <rect width="176" height="30" rx="15" fill="#171B28" stroke="#343D57"/>
+    <circle cx="18" cy="15" r="5" fill="#59D185"/>
+    <text x="34" y="20" fill="#B7BFD4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="600">AGENT SKILL</text>
+
+    <text x="0" y="132" fill="#F4F1E8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="88" font-weight="750" letter-spacing="-4">git-coda</text>
+    <text x="2" y="178" fill="#B7BFD4" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="25" font-weight="500">Every change resolves into one final note.</text>
+
+    <g transform="translate(0 226)">
+      <text x="0" y="20" fill="#F2B84B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">$ coda</text>
+      <text x="0" y="56" fill="#7E879E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">infer names · resolve conflicts · never force</text>
+    </g>
+  </g>
+
+  <!-- the score: a staff where the workflow walks as notes, closed by the coda sign -->
+  <g transform="translate(704 55)">
+    <rect width="432" height="290" rx="20" fill="#11131E" stroke="#2C3247" stroke-width="2"/>
+    <g transform="translate(24 22)">
+      <circle cx="7" cy="7" r="5" fill="#F06A6A"/>
+      <circle cx="27" cy="7" r="5" fill="#F2B84B"/>
+      <circle cx="47" cy="7" r="5" fill="#59D185"/>
+      <text x="310" y="12" fill="#5B6378" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">the score</text>
+    </g>
+
+    <!-- staff -->
+    <g stroke="#2E3345" stroke-width="1">
+      <path d="M30 63H410M30 77H410M30 91H410M30 105H410M30 119H410"/>
+    </g>
+
+    <!-- workflow as notes; labels staggered like lyrics -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" text-anchor="middle">
+      <g transform="translate(54 91)">
+        <ellipse rx="6.5" ry="4.8" transform="rotate(-20)" fill="#59D185"/>
+        <path d="M6 -1.5V-24" stroke="#59D185" stroke-width="2" stroke-linecap="round"/>
+        <text y="44" fill="#B7BFD4">stash</text>
+      </g>
+      <g transform="translate(102 91)">
+        <ellipse rx="6.5" ry="4.8" transform="rotate(-20)" fill="#59D185"/>
+        <path d="M6 -1.5V-24" stroke="#59D185" stroke-width="2" stroke-linecap="round"/>
+        <text y="66" fill="#B7BFD4">sync</text>
+      </g>
+      <g transform="translate(150 91)">
+        <ellipse rx="6.5" ry="4.8" transform="rotate(-20)" fill="#59D185"/>
+        <path d="M6 -1.5V-24" stroke="#59D185" stroke-width="2" stroke-linecap="round"/>
+        <text y="44" fill="#B7BFD4">branch</text>
+      </g>
+      <g transform="translate(198 91)">
+        <ellipse rx="6.5" ry="4.8" transform="rotate(-20)" fill="#59D185"/>
+        <path d="M6 -1.5V-24" stroke="#59D185" stroke-width="2" stroke-linecap="round"/>
+        <text y="66" fill="#B7BFD4">commit</text>
+      </g>
+      <g transform="translate(246 91)">
+        <ellipse rx="6.5" ry="4.8" transform="rotate(-20)" fill="#59D185"/>
+        <path d="M6 -1.5V-24" stroke="#59D185" stroke-width="2" stroke-linecap="round"/>
+        <text y="44" fill="#B7BFD4">verify</text>
+      </g>
+      <g transform="translate(294 91)">
+        <ellipse rx="7.5" ry="5.5" transform="rotate(-20)" fill="#F2B84B"/>
+        <path d="M7 -1.5V-26" stroke="#F2B84B" stroke-width="2.5" stroke-linecap="round"/>
+        <text y="66" fill="#F2B84B">PR</text>
+      </g>
+      <!-- coda sign -->
+      <g transform="translate(356 91)">
+        <circle r="12" fill="none" stroke="#F2B84B" stroke-width="3"/>
+        <path d="M-22 0H22" stroke="#F2B84B" stroke-width="3" stroke-linecap="round"/>
+        <text y="44" fill="#F2B84B">coda</text>
+      </g>
+      <!-- final barline -->
+      <path d="M398 63V119" stroke="#8992A8" stroke-width="2"/>
+      <path d="M406 63V119" stroke="#F4F1E8" stroke-width="5"/>
+    </g>
+
+    <g transform="translate(26 196)">
+      <rect width="380" height="64" rx="12" fill="#0A0C12" stroke="#20263A"/>
+      <text x="18" y="26" fill="#F2B84B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">MOVEMENT ENDS AT</text>
+      <text x="18" y="50" fill="#F4F1E8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700">main ← feat/your-change</text>
+      <rect x="296" y="16" width="66" height="30" rx="15" fill="#15271C"/>
+      <text x="329" y="36" fill="#72E29A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="800" text-anchor="middle">SAFE</text>
+    </g>
+  </g>
+</svg>
